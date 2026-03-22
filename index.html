@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MasalaCSS — Utility-first CSS, desi style</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=JetBrains+Mono:wght@400;600&family=Lora:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/style.css" />
+  </head>
+  <body>
+    <!-- NAV -->
+    <nav>
+      <div class="container inner">
+        <div class="logo">masala<span>CSS</span></div>
+        <div class="nav-right">
+          <a href="#how" class="nav-link">how it works</a>
+          <a href="#classes" class="nav-link">utilities</a>
+
+          <!-- GitHub -->
+          <a
+            href="https://github.com/DhruvSood05/masala-css.git"
+            target="_blank"
+            rel="noopener"
+            class="social-link"
+            aria-label="GitHub repository"
+          >
+            <svg
+              width="17"
+              height="17"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.605-3.369-1.342-3.369-1.342-.454-1.154-1.11-1.461-1.11-1.461-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"
+              />
+            </svg>
+          </a>
+
+          <!-- X / Twitter -->
+          <a
+            href="https://x.com/dhruvsood05"
+            target="_blank"
+            rel="noopener"
+            class="social-link"
+            aria-label="X (Twitter) profile"
+          >
+            <svg
+              width="15"
+              height="15"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L1.254 2.25H8.08l4.259 5.63 5.905-5.63zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+              />
+            </svg>
+          </a>
+
+          <div class="toggle-wrap">
+            <button
+              class="toggle"
+              id="themeToggle"
+              aria-label="Toggle theme"
+            ></button>
+            <span class="toggle-label" id="toggleLabel">light</span>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+      <svg
+        class="spice-dots"
+        viewBox="0 0 400 400"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle
+          cx="200"
+          cy="200"
+          r="180"
+          stroke="currentColor"
+          stroke-width="1.5"
+        />
+        <circle
+          cx="200"
+          cy="200"
+          r="130"
+          stroke="currentColor"
+          stroke-width="1.5"
+        />
+        <circle
+          cx="200"
+          cy="200"
+          r="80"
+          stroke="currentColor"
+          stroke-width="1.5"
+        />
+        <circle cx="200" cy="200" r="30" fill="currentColor" />
+        <!-- spice particles -->
+        <circle cx="60" cy="200" r="4" fill="currentColor" />
+        <circle cx="340" cy="200" r="4" fill="currentColor" />
+        <circle cx="200" cy="60" r="4" fill="currentColor" />
+        <circle cx="200" cy="340" r="4" fill="currentColor" />
+        <circle cx="110" cy="110" r="3" fill="currentColor" />
+        <circle cx="290" cy="110" r="3" fill="currentColor" />
+        <circle cx="110" cy="290" r="3" fill="currentColor" />
+        <circle cx="290" cy="290" r="3" fill="currentColor" />
+      </svg>
+
+      <div class="container">
+        <p class="hero-eyebrow">
+          ⚡ utility-first · zero dependencies · pure js
+        </p>
+        <h1>CSS that hits like<br /><em>fresh masala chai</em></h1>
+        <p class="hero-sub">
+          A lightweight, Tailwind-inspired utility engine that applies styles
+          directly from JavaScript. No build step. No bundler. Just classes that
+          work.
+        </p>
+        <div class="hero-actions">
+          <a href="#classes" class="btn btn-primary">↓ Browse Utilities</a>
+          <a href="#how" class="btn btn-ghost">How it works</a>
+        </div>
+
+        <div class="code-strip">
+          <span class="kw">import</span> masalaCSS <span class="kw">from</span>
+          <span class="str">"./cssobjects.js"</span>;<br />
+          <br />
+          <span class="comment" style="color: var(--muted)"
+            >// In your HTML:</span
+          ><br />
+          &lt;<span class="fn">h1</span> <span class="kw">class</span>=<span
+            class="str"
+            >"masala-bg-red masala-font-bold masala-p-20"</span
+          >&gt;<br />
+          &nbsp;&nbsp;Spicy styles, zero config<br />
+          &lt;/<span class="fn">h1</span>&gt;
+        </div>
+
+        <!-- STATS -->
+        <div class="stats-strip">
+          <div class="stat-card">
+            <div class="stat-num" id="totalCount">63</div>
+            <div class="stat-label">Utility Classes</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num">8</div>
+            <div class="stat-label">Categories</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num">0</div>
+            <div class="stat-label">Dependencies</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- HOW IT WORKS -->
+    <section class="how-section" id="how">
+      <div class="container">
+        <p class="section-title">How it <em>works</em></p>
+        <p class="section-sub">Four steps from class name to styled element</p>
+        <div class="steps">
+          <div class="step-card">
+            <div class="step-num">01</div>
+            <h3>import</h3>
+            <p>
+              Import the utility map from <code>cssobjects.js</code> into your
+              runtime.
+            </p>
+          </div>
+          <div class="step-card">
+            <div class="step-num">02</div>
+            <h3>scan</h3>
+            <p>
+              The engine scans all DOM nodes for class names starting with
+              <code>masala-</code>.
+            </p>
+          </div>
+          <div class="step-card">
+            <div class="step-num">03</div>
+            <h3>lookup</h3>
+            <p>
+              Each class is looked up in the map and its CSS declaration is
+              fetched.
+            </p>
+          </div>
+          <div class="step-card">
+            <div class="step-num">04</div>
+            <h3>apply</h3>
+            <p>
+              Declarations are appended to the element's inline
+              <code>style</code>. Done.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- UTILITIES TABLE -->
+    <section class="table-section" id="classes">
+      <div class="container">
+        <p class="section-title">All <em>Utilities</em></p>
+        <p class="section-sub">
+          Every class available in <code>cssobjects.js</code> — searchable &
+          filterable
+        </p>
+
+        <div class="filter-bar">
+          <button class="filter-btn active" data-cat="all">All</button>
+          <button class="filter-btn" data-cat="colors">Colors</button>
+          <button class="filter-btn" data-cat="typography">Typography</button>
+          <button class="filter-btn" data-cat="spacing">Spacing</button>
+          <button class="filter-btn" data-cat="borders">Borders</button>
+          <button class="filter-btn" data-cat="layout">Layout</button>
+          <button class="filter-btn" data-cat="extras">Extras</button>
+          <input
+            class="search-box"
+            id="searchBox"
+            type="text"
+            placeholder="search classes…"
+          />
+        </div>
+
+        <div class="table-wrap">
+          <table id="utilTable">
+            <thead>
+              <tr>
+                <th>Class</th>
+                <th>CSS Declaration</th>
+                <th>Category</th>
+                <th>Preview</th>
+              </tr>
+            </thead>
+            <tbody id="tableBody">
+              <!-- rows injected by JS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <div class="container">
+      <footer>
+        <div class="footer-left">
+          Built with ♥ as a learning project — <strong>masalaCSS</strong>
+        </div>
+        <span class="mit-badge">MIT License</span>
+      </footer>
+    </div>
+    <script src="./src/main.js"></script>
+  </body>
+</html>
